@@ -10,9 +10,9 @@ function Ball(x, y, r) {
   this.x = x;
   this.y = y;
   this.r = r;
-  this.g = 0.3;
+  this.g = 0.8;
   this.vv = 0;
-  this.vvMax = 40;
+  this.vvMax = 10;
   this.yStart = y;
 
   this.draw = function() {
@@ -36,6 +36,13 @@ function Ball(x, y, r) {
       this.vv = 0;
       this.y = this.yStart;
     }
+  }
+}
+
+function keyPressed() {
+  if (keyCode === UP_ARROW) {
+    player.y -= 1;
+    player.vv = -10;
   }
 }
 
